@@ -2,6 +2,12 @@
 
 A crypto-themed running game that integrates SP1 zero-knowledge proofs for cryptographic verification of game scores. Built with modern web technologies and the Succinct SP1 framework.
 
+![image](https://github.com/user-attachments/assets/087d81d8-5702-428a-acfa-af66daab556e)
+
+## Try game
+
+- https://succinct-runner.tempestcrypto.net/
+
 ## 🎮 Game Overview
 
 Succinct Runner is an endless runner game where players:
