@@ -1,0 +1,17 @@
+[0;1;31m×[0m apache2.service - The Apache HTTP Server
+     Loaded: loaded (]8;;file://Ubuntu-2404-noble-amd64-base/usr/lib/systemd/system/apache2.service/usr/lib/systemd/system/apache2.service]8;;; [0;1;38;5;185mdisabled[0m; preset: [0;1;32menabled[0m)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Sun 2025-03-23 18:31:08 CET; 3min 48s ago
+   Duration: 1d 2h 28min 4.789s
+       Docs: ]8;;https://httpd.apache.org/docs/2.4/https://httpd.apache.org/docs/2.4/]8;;
+    Process: 3792061 ExecStart=/usr/sbin/apachectl start [0;1;31m(code=exited, status=1/FAILURE)[0m
+        CPU: 11ms
+
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base systemd[1]: Starting apache2.service - The Apache HTTP Server...
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base apachectl[3792063]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 2a01:4f9:3051:5468::2. Set the 'ServerName' directive globally to suppress this message
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base apachectl[3792063]: (98)Address already in use: AH00072: make_sock: could not bind to address [::]:80
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base apachectl[3792063]: (98)Address already in use: AH00072: make_sock: could not bind to address 0.0.0.0:80
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base apachectl[3792063]: no listening sockets available, shutting down
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base apachectl[3792063]: AH00015: Unable to open logs
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base systemd[1]: [0;1;39m[0;1;31m[0;1;39mapache2.service: Control process exited, code=exited, status=1/FAILURE[0m
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mapache2.service: Failed with result 'exit-code'.[0m
+Mar 23 18:31:08 Ubuntu-2404-noble-amd64-base systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start apache2.service - The Apache HTTP Server.[0m

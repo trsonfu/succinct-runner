@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Succinct Runner</title>
+    <link rel="stylesheet" href="css/crypto-runner.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Macbook Menu Bar -->
+    <div class="menu-bar">
+        <div class="menu-left">
+            <div class="apple-icon">
+                <i class="fab fa-apple"></i>
+            </div>
+            <div class="menu-items">
+                <span>Succinct Runner</span>
+                <span>File</span>
+                <span>Edit</span>
+                <span>View</span>
+                <span>Window</span>
+                <span>Help</span>
+            </div>
+        </div>
+        <div class="menu-right">
+            <div class="menu-icons">
+                <i class="fas fa-bluetooth-b"></i>
+                <i class="fas fa-wifi"></i>
+                <i class="fas fa-battery-full"></i>
+                <i class="fas fa-volume-up"></i>
+                <i class="fas fa-search"></i>
+                <i class="fas fa-sitemap"></i>
+                <i class="fas fa-clock" id="time-icon"></i>
+            </div>
+            <div class="time-display" id="time-display">12:00 PM</div>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <div class="player"></div>
+        <div class="ground"></div>
+        <div class="game-stats">
+            <div id="score">0</div>
+            <div id="combo" class="combo-display">Combo: 0x</div>
+        </div>
+        
+        <div id="gameOver">
+            <h2>Game Over!</h2>
+            <div id="finalScore">Score: 0</div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="stat-label">Max Combo:</span>
+                    <span id="maxCombo" class="stat-value">0x</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Tokens Collected:</span>
+                    <span id="tokensCollected" class="stat-value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Rare Tokens:</span>
+                    <span id="rareTokensCollected" class="stat-value">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls-container">
+        <button id="playAgain" class="control-button">Play Again</button>
+        <button id="proofBtn" class="control-button">Generate Proof</button>
+        <button id="helpBtn" class="control-button">Help</button>
+    </div>
+
+    <div id="helpPopup">
+        <h2>How to Play</h2>
+        <ul>
+            <li>Press <span class="key">Space</span> to jump over obstacles</li>
+            <li>Press <span class="key">P</span> to pause/resume the game</li>
+            <li>Collect tokens to earn points:
+                <ul>
+                    <li>Regular tokens: 10 points</li>
+                    <li>Rare tokens (glowing): 50 points</li>
+                </ul>
+            </li>
+            <li>Build combos by collecting tokens quickly!</li>
+            <li>Avoid obstacles - hitting them ends the game</li>
+            <li>Game speed increases every 100 points</li>
+            <li>Generate proof after game over with score > 0</li>
+        </ul>
+        <button id="continueBtn" class="control-button">Continue</button>
+    </div>
+
+    <div id="proofPopup" class="popup" style="display: none;">
+        <div class="popup-content">
+            <h2>?? Proof Generated Successfully!</h2>
+            <div class="proof-details">
+                <p><strong>Score:</strong> <span id="proof-score"></span></p>
+                <p><strong>Proof ID:</strong> <span id="proof-id"></span></p>
+                <p><strong>Cycles:</strong> <span id="proof-cycles"></span></p>
+                <p><strong>Timestamp:</strong> <span id="proof-timestamp"></span></p>
+            </div>
+            <button id="close-proof-popup" class="control-button">Close</button>
+        </div>
+    </div>
+
+    <script src="js/crypto-runner.js"></script>
+</body>
+</html> 
